@@ -1,0 +1,21 @@
+jobs:
+  build:
+    runs-on: ubunto-latest
+    steps:
+    -uses: action/checkout@v2
+    -name: set up python 3.8
+    uses: actions/setup-python@v1
+    with:
+      python-version: 3.8
+   -name: install dependencies 
+    run: |
+      make install
+   -name: lint with pylint 
+     run: |
+       make lint 
+  -name: test with pytest 
+      run:  |
+        make test 
+  -name: format code with python black
+      run: |
+         make format  
