@@ -1,5 +1,4 @@
 name: python application test with github actions
-
 on: [push]
 jobs:
   build:
@@ -7,7 +6,6 @@ jobs:
     steps:
     -uses: actions/checkout@v2 
     -name: set up Python 3.8
-    -uses: actions/setup-python@v1  
        with: 
         python-version: 3.8
     - name: Install dependencies
