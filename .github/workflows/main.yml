@@ -8,6 +8,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+       runs: 
+   using: node12 
+   main: dist/index.js 
+   post: dist/index.js 
 
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
